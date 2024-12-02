@@ -1,0 +1,369 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Movie_Rec_System" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Movie_Rec_System_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Movie_Rec_System" sap:VirtualizedContainerService.HintSize="1282,3802" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="str_Movie1" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie2" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie3" />
+      <Variable x:TypeArguments="s:String[]" Default="[{&quot;IronMan&quot;,&quot;Batman&quot;,&quot;Sad Joker&quot;}]" Name="arr_MovieNames" />
+      <Variable x:TypeArguments="x:String" Name="str_Rate" />
+      <Variable x:TypeArguments="x:String" Name="str_Period" />
+      <Variable x:TypeArguments="x:String" Name="str_AllMovie" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie5" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie6" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie4" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie10" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie9" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie8" />
+      <Variable x:TypeArguments="x:String" Name="str_Movie7" />
+      <Variable x:TypeArguments="x:String" Name="str_SelectedMovie" />
+      <Variable x:TypeArguments="x:String" Name="str_DateOfFilm" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge IMDb Ratings, Reviews, and Where to Watc" sap:VirtualizedContainerService.HintSize="502,3779" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" ScopeGuid="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,3539" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Menu'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com" CVScreenId="b171f6c9-57c7-4ba6-996d-2540ac6339a9" ContentHash="sbCnNNfJOkS7hLnkNnRH3A" CvElementArea="142, 144, 26, 21" CvType="Icon" DesignTimeRectangle="144, 143, 24, 24" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' tag='path' class='' aaname='' /&gt;" Guid="997a411e-e542-4891-9819-cef892300ba6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA8SURBVDhPYxASEvpPC0x7g69evfqfUnDx4kVMg69duwaVJh9gNZjaeDTyMA0ejbzRyMM0mNqYRgYL/QcA/wPOzG9I5bAAAAAASUVORK5CYII=" InformativeScreenshot="d1bd25092e15fbf207f0830620d0d6fb.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/IQCm5dm4BEqI2LzjyyUMyw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='IMDb: Ratings, Reviews, and Where to Watch the Best Movies &amp;amp; TV Shows' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="b171f6c9-57c7-4ba6-996d-2540ac6339a9" CvTextArea="170, 147, 39, 14" CvTextArgument="Menu" CvType="Text" DesignTimeRectangle="172, 146, 36, 18" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='SPAN' type='' class='ipc-responsive-button__text' aaname='Menu' check:innerText='Menu' /&gt;" Guid="f2d7eee9-9f79-4914-9a07-5ce18b4a7a33" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Top Box Office'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com" CVScreenId="74bd26f4-49b3-4ed8-ae50-acbf234afe46" ContentHash="Jz3W9b2NI0mADkVH2NkaAA" CvTextArea="222, 435, 113, 19" CvTextArgument="Top Box Office" CvType="Text" DesignTimeRectangle="224, 435, 269, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Top Box Office' aria-role='presentation' tag='SPAN' type='' class='ipc-list-item__text' check:innerText='Top Box Office' /&gt;" Guid="34f0ddee-449f-4630-b145-a0d7d714d9b9" InformativeScreenshot="f42a7aea9958620bb597da1b190966c6.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/BS6V0qTzp0W7-dFcR_h96Q" ScopeSelectorArgument="&lt;html app='msedge.exe' title='IMDb: Ratings, Reviews, and Where to Watch the Best Movies &amp;amp; TV Shows' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NGetText DisplayName="Get Text '1. Smile 2'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_4" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie1]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="8c87401a-5f75-44f4-a5e2-009518379cc0" ContentHash="x1zq9lAlUUqSG-MSwOoELA" CvTextArea="177, 478, 73, 14" CvType="AnyWordGroup" DesignTimeRectangle="178, 476, 71, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="4490a0eb-2c5d-411e-ae8d-2217d50cad4b" InformativeScreenshot="7d33f837bc982936668f86a900ef6a21.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/2MkEsR4k906IVwfBcBJ0Mw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8c87401a-5f75-44f4-a5e2-009518379cc0" CvTextArea="177, 478, 73, 14" CvTextArgument="1. Smile 2" CvType="Text" DesignTimeRectangle="178, 476, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='1. Smile 2' /&gt;" Guid="6fd8ac44-762e-481a-a395-fba8795ea186" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '2. The Wild RobotWeeken…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie2]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="8c87401a-5f75-44f4-a5e2-009518379cc0" ContentHash="QtdbQzel9kOL6HKz27rpZw" CvTextArea="176, 614, 130, 15" CvType="AnyWordGroup" DesignTimeRectangle="178, 613, 127, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="73d3ceb7-2818-48c4-83f7-98160bf63fe0" InformativeScreenshot="f66f84fc4e9773708f318fc4ede311e2.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/aEMgitPrhUOkYghNXIlFKw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="8c87401a-5f75-44f4-a5e2-009518379cc0" CvTextArea="176, 614, 130, 15" CvTextArgument="2. The Wild Robot" CvType="Text" DesignTimeRectangle="178, 613, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='2. The Wild Robot' /&gt;" Guid="69e6545d-cce8-42af-a067-f047b417f041" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '3. Terrifier 3Weekend G…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie3]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="decb6347-ce63-428f-8e3a-c3399945da72" ContentHash="Xah2x4tuIUKfGlzoUaSASg" CvTextArea="176, 552, 90, 14" CvType="AnyWordGroup" DesignTimeRectangle="178, 550, 88, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="68d408c1-39df-4f1b-8593-1173d7590b21" InformativeScreenshot="f049c462800edb7fa3b4a3cb471180e1.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/86ytwoT8iEGmzPF8-OsYbg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="decb6347-ce63-428f-8e3a-c3399945da72" CvTextArea="176, 552, 90, 14" CvTextArgument="3. Terrifier 3" CvType="Text" DesignTimeRectangle="178, 550, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='3. Terrifier 3' /&gt;" Guid="5aa46aed-4689-406b-8c5e-c83e576b5506" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '4. Beetlejuice Beetleju…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie4]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" ContentHash="vDU0MsivHUOEN3Gjjsitcg" CvTextArea="177, 278, 184, 18" CvType="AnyWordGroup" DesignTimeRectangle="178, 277, 182, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="b3f22f56-585a-469b-859b-3a7fe2bf4fc6" InformativeScreenshot="4b88f61294b277203d71072cf00ff951.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/XlDFwXOdC0WVQkvidzjC-A" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" CvTextArea="177, 278, 184, 18" CvTextArgument="4. Beetlejuice Beetlejuice" CvType="Text" DesignTimeRectangle="178, 277, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='4. Beetlejuice Beetlejuice' /&gt;" Guid="ef617e1e-c713-4480-8510-2f0a60475041" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '5. We Live in TimeWeeke…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie5]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" ContentHash="j7Raojabx0KEHjvDZFSQHA" CvTextArea="177, 416, 132, 14" CvType="AnyWordGroup" DesignTimeRectangle="178, 414, 131, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="d202e454-29f7-4e9b-8324-177ba154b79f" InformativeScreenshot="dad705e7ba8946200e9198035dad2833.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/CXZB8kRjZ0yq04NcTivuwA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" CvTextArea="177, 416, 132, 14" CvTextArgument="5. We Live in Time" CvType="Text" DesignTimeRectangle="178, 414, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='5. We Live in Time' /&gt;" Guid="25252081-ffb3-40ba-9311-20e27e50366f" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '6. Joker Folie à Deux'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_12" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie6]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" ContentHash="vOsqROfzUE-3dJCenp1CtQ" CvTextArea="177, 553, 156, 14" CvType="AnyWordGroup" DesignTimeRectangle="178, 551, 154, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="d86b66f2-c6ac-4ecf-8c23-c93869a040a5" InformativeScreenshot="55eba3db52e4732fb9beb5b86e8da98f.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/OgodToM2S0KDIaEZMd0_Xw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d1daf687-168d-4b26-9b74-6afea7ac04fc" CvTextArea="177, 553, 156, 14" CvTextArgument="6. Joker: Folie à Deux" CvType="Text" DesignTimeRectangle="178, 551, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='6. Joker: Folie à Deux' /&gt;" Guid="4c517845-42cf-4e56-bf76-c2863ddf88e3" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '7. Piece by PieceWeeken…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie7]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="5e0824bd-50fe-419e-a1f9-9ca98d5d0708" ContentHash="1cz7ZBiYN0Si7_f4sP43sA" CvTextArea="176, 499, 126, 15" CvType="AnyWordGroup" DesignTimeRectangle="178, 377, 123, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="109ee040-1f86-4526-bac9-f22823c507ef" InformativeScreenshot="0f6deb718254c31ff71ac254bbbecd16.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/CUiOdB7Eq0-l24Lpqi52Eg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d0a7beec-614a-4d06-a3f1-596b42076d4c" CvTextArea="176, 378, 126, 15" CvTextArgument="7. Piece by Piece" CvType="Text" DesignTimeRectangle="178, 377, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='7. Piece by Piece' /&gt;" Guid="a702a62c-5eee-432e-b6ee-24edea9a93f6" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '8. Transformers OneWeek…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_14" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie8]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="d0a7beec-614a-4d06-a3f1-596b42076d4c" ContentHash="kyQt5yToAkaLqqc_lj4VWg" CvTextArea="177, 516, 149, 14" CvType="AnyWordGroup" DesignTimeRectangle="178, 514, 148, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="14bef57e-27e5-4839-92ad-1d693e22c443" InformativeScreenshot="5bc1fdd11fd26ba7c810683f65eb0c98.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/dQU9W6oaeE-HqPKUbEQk4w" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d0a7beec-614a-4d06-a3f1-596b42076d4c" CvTextArea="177, 516, 149, 14" CvTextArgument="8. Transformers One" CvType="Text" DesignTimeRectangle="178, 514, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='8. Transformers One' /&gt;" Guid="1713b788-8139-45d7-88a9-31a2f5cebce9" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '9. Saturday Night'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_15" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie9]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="d0a7beec-614a-4d06-a3f1-596b42076d4c" ContentHash="rfhAXuHVm0WbFoVO5SgOyg" CvTextArea="177, 652, 126, 18" CvType="AnyWordGroup" DesignTimeRectangle="178, 651, 124, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="2d0a929d-8bb4-4ce0-92d9-f09082f6d3eb" InformativeScreenshot="66cabf826056dcc5a9c135a9615349c1.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/UxMph-V7xEafQXLP8Ug7ng" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="d0a7beec-614a-4d06-a3f1-596b42076d4c" CvTextArea="177, 652, 126, 18" CvTextArgument="9. Saturday Night" CvType="Text" DesignTimeRectangle="178, 651, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='9. Saturday Night' /&gt;" Guid="19e9ab28-714a-40b6-aa43-7bb68951f206" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '10. The Nightmare Befor…'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_16" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Movie10]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/chart/boxoffice" CVScreenId="c66a2402-d0bf-4be2-92d9-684c78592a4b" ContentHash="y9QjLzlVVUmqvhZ482WwKg" CvTextArea="177, 433, 265, 15" CvType="AnyWordGroup" DesignTimeRectangle="178, 432, 263, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='H3' type='' class='ipc-title__text' /&gt;" Guid="b04de4bd-525f-417c-982c-2a0347632e9f" InformativeScreenshot="5150a026ff42482ae594d66da377974a.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/xnXhL80ZrUO4dhXqKfWvNA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Top Box Office (US)' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="c66a2402-d0bf-4be2-92d9-684c78592a4b" CvTextArea="177, 433, 265, 15" CvTextArgument="10. The Nightmare Before Christmas" CvType="Text" DesignTimeRectangle="178, 432, 652, 19" FuzzySelectorArgument="&lt;webctrl type='' class='ipc-title ipc-title--base ipc-title--title ipc-title-link-no-icon ipc-title--on-textPrimary sc-188eab07-2 dWinDP cli-title' parentid='__next' tag='DIV' aaname='' check:innerText='10. The Nightmare Before Christmas' /&gt;" Guid="387cad48-d334-438c-975a-66b8b6b281ec" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[str_AllMovie]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[str_Movie1+";"+str_Movie2+";"+str_Movie3+";"+str_Movie4+";"+str_Movie5+";"+str_Movie6+";"+str_Movie7+";"+str_Movie8+";"+str_Movie9+";"+str_Movie10]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <ui:InputDialog Options="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="434,324" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Please Choose Movie Name: " OptionsString="[str_AllMovie]" Title="Named of Movie">
+              <ui:InputDialog.Result>
+                <OutArgument x:TypeArguments="x:String">[str_SelectedMovie]</OutArgument>
+              </ui:InputDialog.Result>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:InputDialog>
+            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'H3'" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1184516b-8762-4419-8db3-809e10551854" InformativeScreenshot="b0a17225e15662fee5f22f8e687051c8" Selector="[string.Format(&quot;&lt;html app='chrome.exe' title='Top Box Office (US)' /&gt;&lt;webctrl aaname='*{0}' tag='H3' /&gt;&quot;, str_SelectedMovie)]">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:Click.Target>
+            </ui:Click>
+            <uix:NGetText DisplayName="Get Text 'Smile 2'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_17" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_DateOfFilm]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/title/tt29268110" CVScreenId="eaa4cbdf-6ecb-4ef7-bf6c-b73667b94b87" ContentHash="-rCfn2wPQkmBIAp-mV9Lnw" CvTextArea="66, 320, 35, 12" CvType="AnyWordGroup" DesignTimeRectangle="68, 317, 32, 20" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='A' type='' class='ipc-link ipc-link--baseAlt ipc-link--inherit-color' /&gt;" Guid="0b8cd7b9-4de1-4d45-9550-f19078ed52b3" InformativeScreenshot="f338c24a9a6ae232fe15137a9ac8caf5.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/ulvUw5SCbkSEaJAlkyqafA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Smile 2 (2024) - IMDb' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="eaa4cbdf-6ecb-4ef7-bf6c-b73667b94b87" CvTextArea="66, 267, 161, 41" CvTextArgument="Smile 2" CvType="Text" DesignTimeRectangle="66, 267, 161, 41" ElementType="Text" Guid="fc399e7b-0c38-45ab-9a21-c95293aed634" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text 'Smile 2'" sap:VirtualizedContainerService.HintSize="434,189" sap2010:WorkflowViewState.IdRef="NGetText_18" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Period]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/title/tt29268110" CVScreenId="f72a484a-15db-44a3-9957-c2a85937951c" ContentHash="C48qn6B_Y0a_LVFvMnJP2Q" CvTextArea="143, 319, 43, 13" CvType="AnyWordGroup" DesignTimeRectangle="127, 317, 58, 20" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' isleaf='1' tag='LI' type='' class='ipc-inline-list__item' /&gt;" Guid="c2a28bde-be8f-4e31-91d8-8759bda15d58" InformativeScreenshot="fe43f1e5ecfafd60a0ea3f55090dd89c.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/4ldsOklBRE6av8MvuCF-nA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Smile 2 (2024) - IMDb' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="f72a484a-15db-44a3-9957-c2a85937951c" CvTextArea="66, 267, 161, 41" CvTextArgument="Smile 2" CvType="Text" DesignTimeRectangle="66, 267, 161, 41" ElementType="Text" Guid="a09c84cc-f467-44d3-bab0-ecad976c4afc" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <uix:NGetText DisplayName="Get Text '/10'" sap:VirtualizedContainerService.HintSize="434,182" sap2010:WorkflowViewState.IdRef="NGetText_19" ScopeIdentifier="6fb8ad80-5610-4c9e-8d49-9f2018b13bcb" TextString="[str_Rate]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="imdb.com/title/tt29268110" CVScreenId="113dd4cd-8306-44a0-83bf-0d868d995213" ContentHash="vGnq0nAyLkutMR6r4SYVsA" CvTextArea="988, 289, 60, 18" CvType="AnyWordGroup" DesignTimeRectangle="991, 287, 31, 24" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='__next' tag='SPAN' type='' class='sc-d541859f-1 imUuxf' /&gt;" Guid="cc565fd2-6025-4ca0-b3c8-b9f076a6fce6" InformativeScreenshot="59d4a45fc361b2a10456c48de6de1f3f.png" Reference="t25m2FHLkU6c5p5iXR3KcQ/vmWIbyLF5kyfc7QdVSUzRw" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Smile 2 (2024) - IMDb' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target CVScreenId="113dd4cd-8306-44a0-83bf-0d868d995213" CvTextArea="988, 289, 60, 18" CvTextArgument="7.2/10" CvType="Text" DesignTimeRectangle="1022, 287, 26, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='/10' parentid='__next' tag='SPAN' type='' class='' check:innerText='/10' /&gt;" Guid="787ba85d-991d-41e6-be6e-89ca695a4c2b" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" ContentHash="ASyd0Dd-706_0BOPQdNaqg" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAdVJREFUWEftlDssQ1EYx69q7+2tPt2iJjERLJV4LMSgBq9OWBjaREKICBI0MZSQVEMIDQORWiRKjBUbJWHvZMUuwfy53znpfbSJ3EgwOMMv53/O7fm+X865vdzHnQ/+EibABJgAE2ACBQLHyy4ItPAwGLDCzYFEMhLqF+HlslyZI9mUVzfvauUhErbDW6YCJodsZC0+7dDVz6dAIDpmB47jwCeZ4DzuIRkRBQ5uDyVljtwn1bnHUaTkkzU3NDdYSA7L4vk9tBgWQGJTDt1cK5De8YC5mOatWacigCeXirkJ77cVul6IIQHeQgvjkeJJYEa0AleJUrBZ6SloBQRe/f3KuF3XCzEkUFNVTEarXKyu2qwU/EqgqZ4KDHeLEOwQSO5rF3S9EEMC/lozVHpNJPe00WKIkRMIB0UC5l55b34/QwKNskCbnycZ324ckXyB3PX8iAC+TJg3Z9QXUSuwNEr3Idtz6hWMyFcw0Gkl+dtXgAKrE7TxxQZdQ7QCOUwmDu6OJOUELGb12WKoRNcLKRB4OJZgL+KEZNQFjxdlJKfW3ZA99ZL8lC4nI/Kcps9z7MvgfqxzFneTtYz8MUssOGF33gmv1wb+hr8NE2ACTIAJ/HcBH3wCnyEaX70T9tEAAAAASUVORK5CYII=" InformativeScreenshot="44d344116601a44125c53dac4cbc9d26.jpg" Reference="t25m2FHLkU6c5p5iXR3KcQ/S6WNW0_Q1E6NJU3s4ywbmQ" Selector="&lt;html app='msedge.exe' title='IMDb: Ratings, Reviews, and Where to Watch the Best Movies &amp;amp; TV Shows' /&gt;" Title="IMDb: Ratings, Reviews, and Where to Watch the Best Movies &amp; TV Shows" Url="https://www.imdb.com/" Version="V1" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
